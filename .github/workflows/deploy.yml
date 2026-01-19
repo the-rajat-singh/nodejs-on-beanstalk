@@ -6,7 +6,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: [self-hosted, linux, x64]
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
@@ -39,8 +39,8 @@ jobs:
         with:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          application_name: devtrack-app
-          environment_name: devtrack-env
+          application_name: demo-app
+          environment_name: demo-app-env
           region: ap-south-1
           version_label: ${{ github.sha }}-${{ github.run_number }}
           deployment_package: backend/app.zip
