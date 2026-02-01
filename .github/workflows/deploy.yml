@@ -43,6 +43,6 @@ jobs:
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           application_name: demo-app
           environment_name: demo-env
-          region: $REGION
+          region: ${REGION}
           version_label: ${{ github.sha }}-${{ github.run_number }}
           deployment_package: backend/app.zip
