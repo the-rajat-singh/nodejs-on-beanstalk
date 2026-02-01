@@ -1,6 +1,6 @@
 name: Deploy to Elastic Beanstalk
 env:
-  REGION: "ap-south-1"
+  REGION: ap-south-1
 
 on:
   push:
